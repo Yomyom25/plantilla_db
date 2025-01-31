@@ -1,0 +1,77 @@
+:root {
+    --color1: #111;
+    --color2: #7c2020;
+    --color3: #f2f4f6;
+    --color4: #f7831e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.div-1200px {
+    width: 1200px;
+    margin: auto;
+}
+.img-logo {
+    margin: auto;
+    text-align: center;
+    margin: 20px;
+}
+.logo {
+    width: 150px;
+}
+
+.background_login {
+    background-color: var(--color3);
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.background_login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-login {
+    padding: 10px 20px;
+    margin: auto;
+    display: block;
+    width: 480px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.btn-login {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--color2);
+    color: white;
+    width: 480px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+hr {
+    width: 480px;
+    margin: 20px auto;
+    border: 1px solid #cac4c4;
+}
+
+.btn-cuenta {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--color4);
+    color: white;
+    width: 280px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
