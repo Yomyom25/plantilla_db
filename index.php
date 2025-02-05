@@ -25,7 +25,7 @@
 
         <hr>
 
-        <input type="submit" value="Crear una cuenta" class="btn-cuenta btn">
+        <input type="submit" value="Crear una cuenta" class="btn-cuenta btn" onclick="window.location.href='registro.php';">
     </div>
     <div class="footer">
         <span class="letra-footer"> © <?php echo date ("Y")?> Todos los Derechos Reservados <a href="_blank" class="letra-footer">uwu</a></span>
