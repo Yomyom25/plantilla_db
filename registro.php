@@ -16,7 +16,7 @@
 
         <div class="div-form background_login">
             <h1>Registrate</h1>
-            <form action="php/guardar_usuario.php" method="post>
+            <form action="php/guardar_usuario.php" method="post">
 
         <input class="input-login ancho-uniforme" type="text" id="name" name="nombre" placeholder="Nombre(s)" >
 

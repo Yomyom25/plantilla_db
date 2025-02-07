@@ -1,11 +1,24 @@
-<?php 
-$nombre = $_POST ['nombre'];
-$apellido = $_POST['apellido'];
-$email = $_POST['email'];
-$contrasena = $_POST['contrasena'];
-$fecha_nacimiento = $_POST['fecha_nacimiento'];
+<?php
+// Proteccion de inyecciones SQL
+$nombre = addslashes($_POST ['nombre']);
+$apellido = addslashes($_POST['apellido']);
+$email = addslashes($_POST['email']);
+$contrasena = addslashes($_POST['contrasena']);
+$fecha_nacimiento = addslashes($_POST['fecha_nacimiento']);
+
 
 require "conn.php";
+
+// Validar usuario
+$verificar  = mysqli_query($conectar, "SELECT * FROM usuarios WHERE email = '$email' ");
+
+if (mysqli_num_rows($verificar) > 0){
+    echo '<script>
+    alert("El correo ya está registrado!");
+    location.href = "../registro.php"
+    </script>';
+    exit();  // Salimos para evitar ejecutar la consulta de insertar si el usuario ya existe.
+}
 
 // Consulta SQL para insertar los datos en la tabla usuarios
 $insertar = "INSERT INTO usuarios (nombre, apellido, email, contrasena, fecha_nacimiento) VALUES ('$nombre', '$apellido', '$email', '$contrasena', '$fecha_nacimiento')";
@@ -13,5 +26,16 @@ $insertar = "INSERT INTO usuarios (nombre, apellido, email, contrasena, fecha_na
 // Ejecutar la consulta
 $query = mysqli_query($conectar, $insertar);
 
-
+// Aviso
+if ($query) {
+    echo '<script>
+    alert("Registro exitoso!");
+    location.href = "../index.php"
+    </script>';
+} else {
+    echo '<script>
+    alert("Error al registrar!");
+    location.href = "../registro.php"
+    </script>';
+}
 ?>
