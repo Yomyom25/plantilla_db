@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if (isset(    $_SESSION["autentificado"]) == "SI") { {
+    header ("Location: principal.php");
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +26,13 @@
 
     <div class="background_login">
         <h1>Login</h1>
-        <form action="php/autentificar.php" method="POST" name="login_plantilla">
+        <form action="autentificar.php" method="POST" name="login_plantilla">
+            <?php
+            $errorusuario = isset ($_GET["errorusuario"]);
+            if($errorusuario == "SI") {
+                echo "<p class='error'>Usuario o contraseña incorrectos</p>";
+            }
+            ?>
             <input type="text" name="email" placeholder="Correo Electronico" class="input-login ancho-uniforme ">
             <input type="password" name="contrasena" placeholder="Contraseña" class="input-login ancho-uniforme ">
              <br>

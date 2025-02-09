@@ -42,7 +42,12 @@ body {
     border-radius: 5px;
     border: 1px solid var(--color1);
 }
+.error {
+    color: #fefbfb;
+    background-color: #e8393986;
+    margin: 10px;
 
+}
 .background_login h1 {
     text-align: center;
     margin-bottom: 20px;

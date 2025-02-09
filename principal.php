@@ -1,3 +1,6 @@
+<?php 
+require 'seguridad.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +10,6 @@
 </head>
 <body>
     <h1>hola mundo</h1>
+    <a href="salir.php">Cerrar Sesión</a>
 </body>
 </html>

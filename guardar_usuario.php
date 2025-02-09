@@ -1,5 +1,7 @@
 <?php
+require "conn.php";
 // Proteccion de inyecciones SQL
+
 $nombre = addslashes($_POST ['nombre']);
 $apellido = addslashes($_POST['apellido']);
 $email = addslashes($_POST['email']);
@@ -7,15 +9,13 @@ $contrasena = addslashes($_POST['contrasena']);
 $fecha_nacimiento = addslashes($_POST['fecha_nacimiento']);
 
 
-require "conn.php";
-
 // Validar usuario
 $verificar  = mysqli_query($conectar, "SELECT * FROM usuarios WHERE email = '$email' ");
 
 if (mysqli_num_rows($verificar) > 0){
     echo '<script>
     alert("El correo ya está registrado!");
-    location.href = "../registro.php"
+    location.href = "registro.php"
     </script>';
     exit();  // Salimos para evitar ejecutar la consulta de insertar si el usuario ya existe.
 }
@@ -30,12 +30,12 @@ $query = mysqli_query($conectar, $insertar);
 if ($query) {
     echo '<script>
     alert("Registro exitoso!");
-    location.href = "../index.php"
+    location.href = "index.php"
     </script>';
 } else {
     echo '<script>
     alert("Error al registrar!");
-    location.href = "../registro.php"
+    location.href = "registro.php"
     </script>';
 }
 ?>
