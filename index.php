@@ -1,9 +1,9 @@
 <?php 
-session_start();
-if (isset(    $_SESSION["autentificado"]) == "SI") { {
-    header ("Location: principal.php");
-    }
+if (isset($_SESSION["autentificado"]) && $_SESSION["autentificado"] === "SI") {
+    header("Location: principal.php");
+    exit();
 }
+
 ?>
 
 
@@ -21,12 +21,14 @@ if (isset(    $_SESSION["autentificado"]) == "SI") { {
 <div class="div-1200px">
 
 <div class="img-logo">
+    <a href="index.php">
         <img class="logo" src="img/Logo_del_Instituto_Tecnológico_de_Mérida.svg.png" alt="Logo">
+    </a>
     </div>
 
     <div class="background_login">
         <h1>Login</h1>
-        <form action="autentificar.php" method="POST" name="login_plantilla">
+        <form action="autentificar.php" method="post" name="login_plantilla">
             <?php
             $errorusuario = isset ($_GET["errorusuario"]);
             if($errorusuario == "SI") {
