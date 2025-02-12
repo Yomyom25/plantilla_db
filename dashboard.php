@@ -8,11 +8,13 @@
     <div class="div-section">
         <ul>
             <li><a href="">Opcion 1</a></li>
+            <hr class="line-gray">
             <li><a href="">Opcion 2</a></li>
+            <hr class="line-gray">
             <li><a href="">Opcion 3</a></li>
-            <li><a href="principal.php">Principal</a></li>
+            <hr class="line-gray">
             <li><a href="usuarios.php">Usuarios</a></li>
-            <li><a href="salir.php">Salir</a></li>
+            <hr class="line-gray">
         </ul>
     </div>
 </div>

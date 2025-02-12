@@ -11,15 +11,23 @@ require "seguridad.php";
 </head>
 <body>
     <div class="div-1200px">
+        <div class="salir">
+            <?php 
+            include "linea-salir.php"
+            ?>
+        </div>
+    <div class="menu">
         <?php 
         include "dashboard.php";
         ?>
-        <h1>PANEL ADMINISTRATIVO</h1>
+    </div>
+    <div class="contenedor">
+        <h1 class="titulo">PANEL ADMINISTRATIVO</h1>
         <div class="img-principal">
             <img class="principal" src="img/home.jpg" alt="Principal">
         </div>
     </div>
-    <h1>hola mundo</h1>
-    <a href="salir.php">Cerrar Sesión</a>
+    </div>
+
 </body>
 </html>
