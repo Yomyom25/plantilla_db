@@ -9,6 +9,7 @@
     --color6: #098839;
 }
 
+
 body {
     font-weight: 16px;
     line-height: 24px;
@@ -132,19 +133,18 @@ body {
 
 }
 
- table {
-    border-collapse: collapse;
-    text-align: left;
+.tabla-usuarios table {
     font-size: 16px;
     border-radius: 5px;
 }
 
- th,  td {
+.tabla-usuarios th,  td {
     padding: 10px 15px;
     border: 1px solid var(--colorBlack);
+    text-align: center;
 }
 
- th {
+.tabla-usuarios th {
     border-spacing: 5px;
     background-color: var(--colorBlack);
     color: var(--color3);
@@ -181,5 +181,39 @@ body {
 .btn {
     margin: 20px;
     text-align: left;
-    align-items: flex-start;
+    align-items:end;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+/* FORMULARIO */
+.btn-cuenta {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--color4);
+    color: white;
+    width: 280px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+.input-login {
+    padding: 10px 20px;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-color: var(--color3);
+    border: 1px solid var(--color1);
+    display: block;
+}
+
+.ancho-uniforme {
+    width: 480px;
 }

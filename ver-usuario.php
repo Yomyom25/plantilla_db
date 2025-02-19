@@ -30,7 +30,11 @@ include "seguridad.php";
                 </div>
 
                 <div class="usuarios-vista">
-                        <a class="btn-green" href="usuario.php">Regresar</a>
+                    <div class="btn">
+                        <a class="btn-green regresar" href="usuario.php">Regresar</a>
+                    </div>
+
+                        <div class="vista">
                     <?php
                         require "conn.php";
 
@@ -39,15 +43,15 @@ include "seguridad.php";
 
                         $resultado = mysqli_query($conectar, $todos);
                         while ($fila = $resultado -> fetch_array()) {
-                            echo $fila["ID"]. "<br>";
-                            echo $fila["nombre"]. "<br>";
-                            echo $fila["apellido"]. "<br>";
-                            echo $fila["email"]. "<br>";
-                            echo $fila["contrasena"]. "<br>";
-                            echo $fila["fecha_nacimiento"]. "<br>";
+                            echo "<p class='text-bold'>Nombre:</p>" .$fila["nombre"]. "<br>"."<hr>";
+                            echo "<p class='text-bold'>Apellido:</p>" .$fila["apellido"]. "<br>"."<hr>";
+                            echo "<p class='text-bold'>Correo electronico:</p>" .$fila["email"]. "<br>"."<hr>";
+                            echo "<p class='text-bold'>Contraseña:</p>" .$fila["contrasena"]. "<br>"."<hr>";
+                            echo "<p class='text-bold'>Fecha de nacimiento:</p>" .$fila["fecha_nacimiento"]. "<br>";
                             echo "<hr>";
                         }
                     ?>
+                    </div>
                 </div>
             </section>
 

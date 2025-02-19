@@ -36,13 +36,13 @@ include "seguridad.php";
         <!-- Tabla de usuarios -->
             <table class="tabla-usuarios">
                 <tr>
-                    <th class="yellow">ID</th>
+                    <th class="font-yellow">ID</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Correo</th>
-                    <th class="yellow">Ver</th>
-                    <th class="yellow">Editar</th>
-                    <th class="yellow">Borrar</th>
+                    <th class="font-yellow">Ver</th>
+                    <th class="font-yellow">Editar</th>
+                    <th class="font-yello">Borrar</th>
                 </tr>
                 <?php
             require "conn.php";
