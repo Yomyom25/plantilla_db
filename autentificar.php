@@ -12,7 +12,7 @@ $resultado = mysqli_query($conectar, $comparar);
 if (mysqli_num_rows($resultado) > 0) {
   session_start();
   $_SESSION["autentificado"] = "SI";
-  header("Location: principal.php");
+  header("Location: principal2.php");
 } else {
 
   echo '

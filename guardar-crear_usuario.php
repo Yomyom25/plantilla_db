@@ -30,12 +30,12 @@ $query = mysqli_query($conectar, $insertar);
 if ($query) {
     echo '<script>
     alert("Registro exitoso!");
-    location.href = "usuarios.php"
+    location.href = "usuario.php"
     </script>';
 } else {
     echo '<script>
     alert("Error al registrar!");
-    location.href = "crear_usuario.php"
+    location.href = "agregar_usuario.php"
     </script>';
 }
 ?>
