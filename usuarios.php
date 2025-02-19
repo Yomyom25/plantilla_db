@@ -28,6 +28,8 @@ require "seguridad.php";
             <br>
             <a class="add-user" href="crear_usuario.php">Crear Usuario</a>
             <br>
+
+        <!-- Tabla de usuarios -->
             <table class="tabla-usuarios">
                 <tr>
                     <th class="yellow">ID</th>
@@ -38,27 +40,35 @@ require "seguridad.php";
                     <th class="yellow">Editar</th>
                     <th class="yellow">Borrar</th>
                 </tr>
+                <?php
+            require "conn.php";
+
+            $todos = "SELECT * FROM usuarios ORDER BY id ASC";
+            $resultado = mysqli_query($conectar, $todos);
+            while ($fila = $resultado -> fetch_array()) {
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>Juan Perez</td>
-                    <td>juan.perez@gmail.com</td>
-                    <td>Administrador</td>
-                    <td><a href=""><img class="img-tabla"  src="img/ver.png" alt=""></a></td>
+                    <td><?php echo $fila["ID"] ?></td>
+                    <td><?php echo $fila["nombre"] ?></td>
+                    <td><?php echo $fila["apellido"] ?></td>
+                    <td><?php echo $fila["email"] ?></td>
+                    <td><a href=""><img class="img-tabla"  src="img/see-icon.png" alt=""></a></td>
                     <td><a href=""><img class="img-tabla" src="img/editar.png" alt=""></a></td>
-                    <td><a href=""><img class="img-tabla" src="img/eliminar.png" alt=""></a></td>
+                    <td><a href="#" onClick="validarDelete('eliminar.php?id=<?php echo $fila["ID"];?>')"><img class="img-tabla" src="img/eliminar.png" alt=""></a></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Maria Martinez</td>
-                    <td>maria.martinez@gmail.com</td>
-                    <td>Usuario</td>
-                    <td><a href=""><img class="img-tabla" src="img/ver.png" alt=""></a></td>
-                    <td><a href=""><img class="img-tabla" src="img/editar.png" alt=""></a></td>
-                    <td><a href=""><img class="img-tabla" src="img/eliminar.png" alt=""></a></td>
-                </tr>
+                <?php }?>
 
             </table>
         </div>
     </div>
+    <script>
+        // Funcion para validar el formulario de crear usuario
+        function validarDelete(url) {
+            var mensaje = confirm("¿Está seguro de eliminar este usuario?");
+            if (mensaje == true) {
+                window.location = url;
+            }
+        }
+    </script>
 </body>
 </html>

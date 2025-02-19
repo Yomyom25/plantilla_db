@@ -1,12 +1,12 @@
 <?php 
-require "seguridad.php";
+include "seguridad.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
     <title>principal</title>
 </head>
 <body>
@@ -22,10 +22,7 @@ require "seguridad.php";
         ?>
     </div>
     <div class="contenedor">
-        <h1 class="titulo">PANEL ADMINISTRATIVO</h1>
-        <div class="img-principal">
-            <img class="principal" src="img/home.jpg" alt="Principal">
-        </div>
+       
     </div>
     </div>
 
