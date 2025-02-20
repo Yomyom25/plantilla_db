@@ -178,6 +178,16 @@ body {
     cursor: pointer;
 }
 
+.btn-blue {
+    background-color: var(--color2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .btn {
     margin: 20px;
     text-align: left;
@@ -187,7 +197,6 @@ body {
 .text-bold {
     font-weight: bold;
 }
-
 
 /* FORMULARIO */
 .btn-cuenta {
@@ -214,6 +223,15 @@ body {
     display: block;
 }
 
+.correo {
+    background-color: var(--color1);
+    color: grey;
+}
+
 .ancho-uniforme {
     width: 480px;
+}
+
+.btn-main:hover {
+    background-color: var(--colorBlack);
 }

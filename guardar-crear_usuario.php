@@ -1,4 +1,5 @@
 <?php
+require "seguridad.php";
 require "conn.php";
 // Proteccion de inyecciones SQL
 
@@ -15,7 +16,7 @@ $verificar  = mysqli_query($conectar, "SELECT * FROM usuarios WHERE email = '$em
 if (mysqli_num_rows($verificar) > 0){
     echo '<script>
     alert("El correo ya está registrado!");
-    location.href = "crear_usuario.php"
+    location.href = "agregar-usuario.php"
     </script>';
     exit();  // Salimos para evitar ejecutar la consulta de insertar si el usuario ya existe.
 }

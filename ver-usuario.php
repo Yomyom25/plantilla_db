@@ -31,7 +31,7 @@ include "seguridad.php";
 
                 <div class="usuarios-vista">
                     <div class="btn">
-                        <a class="btn-green regresar" href="usuario.php">Regresar</a>
+                        <a class="btn-green btn-main" href="usuario.php">Regresar</a>
                     </div>
 
                         <div class="vista">
@@ -42,15 +42,24 @@ include "seguridad.php";
                         $todos = "SELECT * FROM usuarios WHERE ID = '$id_usuario' ";
 
                         $resultado = mysqli_query($conectar, $todos);
-                        while ($fila = $resultado -> fetch_array()) {
-                            echo "<p class='text-bold'>Nombre:</p>" .$fila["nombre"]. "<br>"."<hr>";
-                            echo "<p class='text-bold'>Apellido:</p>" .$fila["apellido"]. "<br>"."<hr>";
-                            echo "<p class='text-bold'>Correo electronico:</p>" .$fila["email"]. "<br>"."<hr>";
-                            echo "<p class='text-bold'>Contraseña:</p>" .$fila["contrasena"]. "<br>"."<hr>";
-                            echo "<p class='text-bold'>Fecha de nacimiento:</p>" .$fila["fecha_nacimiento"]. "<br>";
-                            echo "<hr>";
-                        }
-                    ?>
+
+                        $fila = $resultado -> fetch_array();
+                        ?>
+                        <p class='text-bold'>Nombre del usuario:</p>
+                        <p><?php echo $fila["nombre"]. "&nbsp;". $fila["apellido"] ."<hr>";?></p>
+
+                        <p class='text-bold'>Correo electronico:</p>
+                        <p><?php echo $fila["email"]. "<br>"."<hr>"; ?></p>
+
+                        <p class='text-bold'>Contraseña:</p>
+                        <?php echo $fila["contrasena"]. "<br>"."<hr>";?>
+
+                        <p class='text-bold'>Fecha de nacimiento:</p>
+                        <?php  echo $fila["fecha_nacimiento"]. "<br>"."<hr>"; ?>
+
+                    <div class="btn">
+                        <a class="btn-blue" href="editar-usuario.php?id=<?php echo $fila['ID']; ?>">Editar Usuario</a>
+                    </div>
                     </div>
                 </div>
             </section>

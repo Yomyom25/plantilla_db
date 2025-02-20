@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-02-2025 a las 00:32:37
+-- Tiempo de generación: 20-02-2025 a las 01:00:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -41,15 +41,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `nombre`, `apellido`, `email`, `contrasena`, `fecha_nacimiento`) VALUES
-(1, 'uwu', 'uwu', 'yomyeh25@gmail.com', '123', '2025-01-09'),
+(1, 'Usuario', 'Nuevo', 'yomyeh25@gmail.com', '123', '2025-02-19'),
 (2, 'prueba', 'prueba', 'yomaeuanh@gmail.com', '123', '2025-02-11'),
-(3, 'uwu', 'uwu', 'uwu@uwu.com', '12', '2025-02-06'),
-(4, '1', '1', '1', '11', '0000-00-00'),
-(5, 'uwu', 'uwu', '1@merida.tecnm.mx', '1234', '2025-02-28'),
 (6, 'ejemplo', 'ejemplo', 'correoejemplo@gmail.com', '123', '2025-02-12'),
 (7, 'Administrador', 'General', 'admin@admin.com', 'admin', '2025-02-12'),
-(8, 'uno', 'uno', 'uwuwuwu@gmail.com', '1233', '2025-02-28'),
-(9, 'dos', 'dos', 'dos@gmail.com', '1234', '2025-02-28');
+(11, 'uno', 'uno', 'yomaeuan@gmail.com', '123', '2025-02-12'),
+(12, 'uno', 'uno', 'yomaeuan@gmail.como', '123', '2025-02-27');
 
 --
 -- Índices para tablas volcadas
@@ -69,7 +66,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

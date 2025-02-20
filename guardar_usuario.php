@@ -1,4 +1,5 @@
 <?php
+require "seguridad.php";
 require "conn.php";
 // Proteccion de inyecciones SQL
 

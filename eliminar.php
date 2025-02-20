@@ -1,4 +1,6 @@
 <?php 
+
+require "seguridad.php";
 require "conn.php";
 $id_usuario = $_GET["id"];
 
