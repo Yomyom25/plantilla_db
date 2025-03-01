@@ -12,7 +12,7 @@
 body {
     font-weight: 16px;
     line-height: 24px;
-    background-color: var(--color3);
+    background-color: var(--colorWhite);
 }
 
 .yellow {
@@ -40,17 +40,16 @@ body {
 }
 
 .background_login {
-    background-color: var(--colorWhite);
+    background-color: var(--color3) ;
     width: 600px;
     margin: 0 auto;
     text-align: center;
     padding: 20px 30px;
     border-radius: 5px;
-    border: 1px solid var(--color1);
 }
 .error {
     color: #fefbfb;
-    background-color: #e8393986;
+    background-color: #d6d1d186;
     margin: 10px;
 
 }

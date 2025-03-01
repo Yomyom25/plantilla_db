@@ -9,6 +9,8 @@ $email = addslashes($_POST['email']);
 $contrasena = addslashes($_POST['contrasena']);
 $fecha_nacimiento = addslashes($_POST['fecha_nacimiento']);
 
+$password =  password_hash($contrasena, PASSWORD_BCRYPT);
+
 
 // Validar usuario
 $verificar  = mysqli_query($conectar, "SELECT * FROM usuarios WHERE email = '$email' ");
@@ -22,7 +24,7 @@ if (mysqli_num_rows($verificar) > 0){
 }
 
 // Consulta SQL para insertar los datos en la tabla usuarios
-$insertar = "INSERT INTO usuarios (nombre, apellido, email, contrasena, fecha_nacimiento) VALUES ('$nombre', '$apellido', '$email', '$contrasena', '$fecha_nacimiento')";
+$insertar = "INSERT INTO usuarios (nombre, apellido, email, contrasena, fecha_nacimiento) VALUES ('$nombre', '$apellido', '$email', '$password', '$fecha_nacimiento')";
 
 // Ejecutar la consulta
 $query = mysqli_query($conectar, $insertar);

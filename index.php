@@ -28,7 +28,7 @@ if (isset($_SESSION["autentificado"]) && $_SESSION["autentificado"] === "SI") {
 
     <div class="background_login">
         <h1>Login</h1>
-        <form action="autentificar.php" method="post" name="login_plantilla">
+        <form action="autentificar2.php" method="post" name="login_plantilla">
             <?php
             $errorusuario = isset ($_GET["errorusuario"]);
             if($errorusuario == "SI") {

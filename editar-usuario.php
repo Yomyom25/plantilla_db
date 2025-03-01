@@ -48,10 +48,16 @@ include "seguridad.php";
 
                         <input class="input-login ancho-uniforme" value="<?php echo $fila['nombre'] ?>" type="text" name="nombre" placeholder="Nombre(s)">
                         <input class="input-login ancho-uniforme" value="<?php echo $fila['apellido'] ?>" type="text" name="apellido" placeholder="Apellido">
+
+                        <!-- arreglar el CSS -->
                         <div class="input-login correo">
                             <?php echo $fila['email'] ?>
                         </div>
-                        <input class="input-login ancho-uniforme" value="<?php echo $fila['contrasena'] ?>" type="text" name="password" placeholder="contraseña" maxlength="10">
+
+                        <!-- <div class="input-login correo">
+                            <?php echo $fila['contrasena'] ?>
+                        </div> -->
+
                         <p class="entrada-label" for="birthdate">Fecha de nacimiento:</p>
                         <input class="input-login ancho-uniforme" value="<?php echo $fila['fecha_nacimiento'] ?>" type="date" name="fecha_nacimiento" required>
 
