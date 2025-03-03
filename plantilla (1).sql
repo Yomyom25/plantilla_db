@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2025 a las 01:00:47
+-- Tiempo de generación: 03-03-2025 a las 05:14:52
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(50) DEFAULT NULL,
   `apellido` varchar(50) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
-  `contrasena` varchar(10) DEFAULT NULL,
+  `contrasena` varchar(100) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -41,12 +41,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `nombre`, `apellido`, `email`, `contrasena`, `fecha_nacimiento`) VALUES
-(1, 'Usuario', 'Nuevo', 'yomyeh25@gmail.com', '123', '2025-02-19'),
-(2, 'prueba', 'prueba', 'yomaeuanh@gmail.com', '123', '2025-02-11'),
-(6, 'ejemplo', 'ejemplo', 'correoejemplo@gmail.com', '123', '2025-02-12'),
-(7, 'Administrador', 'General', 'admin@admin.com', 'admin', '2025-02-12'),
-(11, 'uno', 'uno', 'yomaeuan@gmail.com', '123', '2025-02-12'),
-(12, 'uno', 'uno', 'yomaeuan@gmail.como', '123', '2025-02-27');
+(16, 'prueba2', 'hash', 'correoejemplo2@gmail.com', '$2y$10$MO2WORFtlkkOn/Fe/MKrTenSIPiABGVLzYqNPbZ.Db8VFcSCKjyyC', '2025-02-27'),
+(17, 'prueba3', 'hash', 'correoejemplo4@gmail.com', '$2y$10$foVdSwme9ie.3UCJqXLeJ.H/St.F3OQEmt7w1BVj7ICc/mzz44Ukm', '2025-02-20'),
+(18, 'Administrador', 'General', 'admin@admin.com', '$2y$10$bFS3U0QXeBHUMnIZlqergOPc0gqVfAn.zBgM2yIOcdkX4JbM7Ste2', '2025-02-26'),
+(19, 'Administrador', 'General 2', 'admin2@admin.com', '$2y$10$y1uSC0SaGeblyQc1Q6kohuzl1mOwFqaHjvT93mvfNgCY7gjhmjCSO', '2025-02-27'),
+(20, 'yom', 'yom', 'yomaeuan@gmail.como', '$2y$10$kpebOoKSJ.Zbgvii6TyGcuN0KEn1BXPjuqSjo1vNqJjcIQuwFXyVi', '2025-02-27');
 
 --
 -- Índices para tablas volcadas
@@ -66,7 +65,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
